@@ -1,12 +1,7 @@
 #simpletests
-simpletests is a small suite of tests of the Go language to prove or disprove commonly repeated advice.
 
 ##Purpose
-The purpose of this test will be to measure the difference between locking a struct with a mutex, and sending data over a channel to be stored by a listening goroutine in a struct. Each iteration of M modifications will be followed by an increase in goroutines writing to the struct/channel. At the conclusion of the test, N routines will be writing M data to the struct.
-
-The measurement gathered will be the time a routine waited on a mutex lock, or the time between inserting data on a channel and that data being processed by the listening goroutine.
-
-Future testing should include incrementing the CPU count that the routines may be spread among to reveal what delay, if any, is introduced by NUMA interactions.
+The purpose of these tests is to measure and prove or disprove many common functions and idioms in Go.
 
 ##Functions
 ###tstest
